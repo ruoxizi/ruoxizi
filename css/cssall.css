@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navcss {
+  height: 150px;
+  width: 100%;
+  background-color: white;
+}
+.navcsc_fixed {
+  position: fixed;
+  height: 150px;
+  width: 100%;
+  background-color: white;
+}
+.navcsc_fixed img {
+  position: relative;
+  left: 0px;
+  top: 10px;
+  width: 250px;
+  height: 125px;
+}
+.navcss img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 250px;
+  height: 125px;
+}
+.navcss a {
+  position: absolute;
+  padding: 30px;
+  right: 10px;
+  top: 10px;
+  font-size: xx-large;
+  color: black;
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+}
+.navcss a:hover {
+  color: rgb(140, 188, 172);
+}
+.zhu_ceBody {
+  display: none;
+  position: relative;
+  height: 700px;
+  width: 100%;
+  background-image: url("../image/登陆页面背景.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.loginBody {
+  display: none;
+  position: relative;
+  height: 700px;
+  width: 100%;
+  background-image: url("../image/登陆页面背景.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.middlecss {
+  height: 700px;
+  width: 400px;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.inputcss {
+  padding-top: 30px;
+}
+.inputcss:first-child {
+  padding-top: 100px;
+}
+input {
+  display: block;
+  width: 300px;
+  height: 30px;
+  margin: 0 auto;
+  border: 1px solid black;
+  text-align: center;
+}
+.inputcss input:focus {
+  outline: 3px solid rgb(139, 255, 210);
+}
+.inputcss i {
+  display: inline-block;
+  width: 5px;
+}
+.centercss {
+  margin: 0 auto;
+}
+.footercss {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(149, 140, 140);
+}
+.footercss span {
+  display: inline-block;
+  line-height: 100px;
+  text-align: center;
+  width: 400px;
+  height: 100px;
+  color: rgb(85, 78, 78);
+}
+.fdiv {
+  display: flex;
+}
+.fdiv_img {
+  float: left;
+}
+.fdiv_span {
+  float: right;
+}
+.fdiv_span span {
+  margin: 10px;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.fdiv_span span:hover {
+  color: orange;
+}
+.not {
+  width: auto;
+  height: 100px;
+}
+.submitcss {
+  margin-top: 50px;
+}
+.submitcss span {
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  width: 100px;
+  height: 50px;
+  text-align: center;
+}
+.bu {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 40px;
+}
+.submitcss a {
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  text-decoration: none;
+}
+.imagee {
+  width: 18px;
+  height: 18px;
+  margin-left: 50px;
+}
+.imagePerform {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: yellow;
+}
+.imagePerform .centercss img {
+  margin: 0 auto;
+  height: 400px;
+  width: 500px;
+}
+.point {
+  position: absolute;
+  bottom: 0px;
+}
+.active {
+  display: block;
+}
+.check_active {
+  border-bottom: 2px solid red;
+  border-width: 2px;
+  border-radius: 5px;
+}
+.disactive {
+  display: none;
+}
+.login {
+  position: relative;
+  top: 100px;
+  left: 25%;
+  height: 400px;
+  width: 400px;
+  background-color: white;
+}
+.selecT {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.phone_check {
+  display: inline-block;
+  height: auto;
+  width: 150px;
+  padding-bottom: 5px;
+  margin-right: 40px;
+  text-align: center;
+}
+.password_check {
+  display: inline-block;
+  height: auto;
+  width: 150px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.phone_get input {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  height: 30px;
+}
+.password_get input {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  height: 30px;
+}
+.login input:focus {
+  outline: 3px solid rgb(139, 255, 210);
+}
+.knock_zhuce {
+  margin-top: 20px;
+  margin-right: 30px;
+  width: 100%;
+  height: 100px;
+}
+.knock_zhuce a {
+  display: flex;
+  float: right;
+}
+.knock_zhuce a:hover {
+  color: rgb(139, 255, 210);
+}
+.swiper-slide {
+  background-color: #eee;
+}
+.swiper-slide img {
+  width: 700px;
+  height: 400px;
+}
+.ce_nav {
+  width: 120px;
+  height: 80px;
+  right: 20px;
+  opacity: 1;
+  position: fixed;
+  display: none;
+}
+.ce_nav_active {
+  display: flex;
+}
+.ce_nav li {
+  display: inline-block;
+  margin: 2px;
+  border: 2px solid rgb(72, 67, 67);
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+}
+.ce_nav li a .download {
+  position: absolute;
+}
+.input-container {
+  position: relative;
+}
+.input-container input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #000000;
+}
+.input-container a {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+}
+.sellBody {
+  position: absolute;
+  transform: translate(10%, 10%);
+  width: 85%;
+  height: 85%;
+  background-color: rgb(123, 123, 123);
+  opacity: 0.9;
+}
+
+.sellBody div {
+  display: flex;
+  float: left;
+  flex-direction: column; /* 垂直排列 */
+  background-color: rgb(146, 135, 135);
+  justify-content: center; /* 水平居中 */
+}
+.sellBody-left {
+  width: 20%;
+  height: 100%;
+}
+.sellBody-left div[class="box"] {
+  width: 90%;
+  height: 20%;
+  text-align: center;
+  margin: 40px auto;
+}
+.sellBody-right {
+  width: 80%;
+  height: 100%;
+}
+
+.box a[class="btn"] {
+  padding: 10px;
+  font-size: xx-small;
+}
+.rightSide {
+  display: block;
+  width: 80%;
+  height: 80%;
+  margin-left: 60px;
+}
+.rightSide .boxx input[type="text"] {
+  width: 70%;
+  margin-left: 125px;
+  margin-top: 50px;
+}
+.rightSide .boxx input[type="file"] {
+  width: 70%;
+  margin-left: 100px;
+  margin-top: 50px;
+  background-color: white;
+}
+.rightSide .boxx button {
+  width: 40%;
+  margin-left: 190px;
+  margin-top: 50px;
+}
+.boxx {
+  width: 100%;
+}
+.inputsellcss {
+  width: 100%;
+  height: 20%;
+}
+.uploaded-image {
+  display: inline-block;
+  background-color: blue;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+.boxx span {
+  vertical-align:top;
+  width: 150px;
+  height: 80px;
+  display: inline-block;
+  background-color: rgb(174, 174, 216);
+  line-height: 80px;
+}

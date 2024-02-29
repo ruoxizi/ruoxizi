@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登陆</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cssall.css" />
+    <link rel="showcut icon" href="./image/logo.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <nav>
+      <!-- 网页导航栏 -->
+      <div class="navcss">
+        <div>
+          <img src="./image/logo.png" alt="logo" />
+        </div>
+        <div>
+          <a href="index.html">返回首页</a>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <!-- 网页区块 -->
+      <div class="loginBody active">
+        <div class="centercss login" style="height: 400px">
+          <form autocomplete="off">
+            <div class="selecT">
+              <a
+                href="#"
+                class="phone_check check_active"
+                name="phone_check"
+                data-id="phone_check"
+              >
+                手机验证码登陆
+              </a>
+              <a
+                href="#"
+                class="password_check"
+                name="password_check"
+                data-id="password_check"
+              >
+                账号密码登陆
+              </a>
+            </div>
+            <div class="phone_get input-container">
+              <input
+                type="text"
+                name="phone_number"
+                placeholder="请输入手机号码"
+              />
+              <div class="input-container">
+                <input
+                  type="text"
+                  placeholder="请输入验证码"
+                  name="check_number"
+                  data-id="验证码"
+                  id="verificationCodeInput"
+                />
+                <a href="javascript:void(0)" id="getVerificationCode"
+                  >获取验证码</a
+                >
+              </div>
+            </div>
+            <div class="password_get disactive">
+              <input type="text" name="身份证" placeholder="请输入身份证号码" />
+              <input
+                type="password"
+                name="password_number"
+                placeholder="请输入密码"
+              />
+            </div>
+            <div name="login" class="submitcss">
+              <div>
+                <img class="imagee" src="./image/勾 (1).png" alt="" /><span
+                  >已阅读并同意</span
+                ><a href="#">《用户服务协议》</a>
+              </div>
+              <button class="bu" type="submit">提交</button>
+            </div>
+          </form>
+          <div class="knock_zhuce">
+            <a class="btn">还没有账号，点击注册</a>
+          </div>
+        </div>
+      </div>
+      <!-- 注册区块 -->
+      <div class="zhu_ceBody">
+        <div class="middlecss centercss">
+          <form autocomplete="off">
+            <div class="inputcss">
+              <input
+                type="text"
+                placeholder="请输入身份证号"
+                name="身份证"
+                data-id="身份证"
+              />
+            </div>
+            <div class="inputcss">
+              <input
+                type="text"
+                placeholder="请输入姓名"
+                name="姓名"
+                data-id="姓名"
+              />
+            </div>
+            <div class="inputcss">
+              <input
+                type="text"
+                placeholder="请输入手机号码"
+                name="手机号码"
+                data-id="手机号码"
+              />
+            </div>
+            <div class="inputcss">
+              <div class="input-container">
+                <input
+                  type="text"
+                  placeholder="请输入验证码"
+                  name="验证码"
+                  data-id="验证码"
+                  id="verificationCodeInput2"
+                />
+                <a href="javascript:void(0)" id="getVerificationCode2"
+                  >获取验证码</a
+                >
+              </div>
+            </div>
+            <div class="inputcss">
+              <input
+                type="password"
+                placeholder="请输入密码"
+                name="密码"
+                data-id="密码"
+              />
+            </div>
+            <div class="inputcss">
+              <input
+                type="password"
+                placeholder="请再次输入密码"
+                name="二次密码"
+                data-id="二次密码"
+              />
+            </div>
+            <div class="inputcss">
+              <input
+                type="address"
+                placeholder="请输入地址"
+                name="地址"
+                data-id="地址"
+              />
+            </div>
+            <div class="submitcss">
+              <div>
+                <img class="imagee" src="./image/勾 (1).png" alt="" /><span
+                  >已阅读并同意</span
+                ><a href="#">《用户服务协议》</a>
+              </div>
+              <button class="bu" type="submit">提交</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <!-- 网页尾部 -->
+      <div class="footercss centercss">
+        <div>
+          <span>版权所有 邑齐兴农有限责任公司 </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    //登陆区块
+    const bu = document.querySelector(".knock_zhuce a");
+    const change_button = document.querySelector(".selecT");
+    const sub_login = document.querySelector(".loginBody form");
+    const image_login = document.querySelector(".loginBody .imagee");
+    const phone_get = document.querySelector(".phone_get");
+    const password_get = document.querySelector(".password_get");
+    let flag1 = false;
+    sub_login.addEventListener("submit", function (e) {
+      const shenfen_number = document.querySelector(
+        ".loginBody input[name=身份证]"
+      );
+      const phone_number = document.querySelector(
+        ".loginBody input[name=phone_number]"
+      );
+      const check_number = document.querySelector(
+        ".loginBody input[name=check_number]"
+      );
+      const password_number = document.querySelector(
+        ".loginBody  input[name=password_number]"
+      );
+      const obj = {
+        shenfen_number: shenfen_number.value,
+        phone_number: phone_number.value,
+        check_number: check_number.value,
+        password_number: password_number.value,
+      };
+      e.preventDefault();
+      if (flag1) localStorage.setItem("uname", JSON.stringify(obj));
+      else {
+        alert("请阅读并同意《用户服务协议》！");
+        this.reset();
+        return 0;
+      }
+      this.reset();
+      location.href = "index.html";
+    });
+    image_login.addEventListener("click", function () {
+      if (!flag1) {
+        this.src = "./image/勾.png";
+        flag1 = true;
+      } else {
+        this.src = "./image/勾 (1).png";
+        flag1 = false;
+      }
+    });
+    //切换为注册区块
+    let timer;
+    let timer2;
+    let flagTime = true;
+    bu.addEventListener("click", function (e) {
+      flagTime = true;
+      e.preventDefault();
+      document.querySelector(".zhu_ceBody").classList.add("active");
+      document.querySelector(".loginBody").classList.remove("active");
+    });
+    change_button.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        change_button
+          .querySelector(".check_active")
+          .classList.remove("check_active");
+        e.target.classList.add("check_active");
+        if (e.target.dataset.id === "password_check") {
+          password_get.classList.remove("disactive");
+          phone_get.classList.add("disactive");
+        } else if (e.target.dataset.id === "phone_check") {
+          phone_get.classList.remove("disactive");
+          password_get.classList.add("disactive");
+        }
+      }
+    });
+    // 注册区块
+    const sub = document.querySelector(".zhu_ceBody form");
+    const image = document.querySelector(".zhu_ceBody .imagee");
+    let flag = false;
+    sub.addEventListener("submit", function (e) {
+      const uname = document.querySelector(".zhu_ceBody input[name=姓名]");
+      const shenfen_number = document.querySelector(
+        ".zhu_ceBody input[name=身份证]"
+      );
+      const phone_number = document.querySelector(
+        ".zhu_ceBody  input[name=手机号码]"
+      );
+      const check_number = document.querySelector(
+        ".zhu_ceBody  input[name=验证码]"
+      );
+      const password_number = document.querySelector(
+        ".zhu_ceBody  input[name=密码]"
+      );
+      const passwordTwo_number = document.querySelector(
+        ".zhu_ceBody  input[name=二次密码]"
+      );
+      const address = document.querySelector(".zhu_ceBody input[name=地址]");
+      const obj = {
+        name: uname.value,
+        shenfen_number: shenfen_number.value,
+        phone_number: phone_number.value,
+        check_number: check_number.value,
+        password_number: password_number.value,
+        check_number: check_number.value,
+        address: address.value,
+      };
+      e.preventDefault();
+      if (flag) localStorage.setItem("uname", JSON.stringify(obj));
+      else {
+        alert("请阅读并同意《用户服务协议》！");
+        this.reset();
+        return 0;
+      }
+      this.reset();
+      location.href = "index.html";
+    });
+    image.addEventListener("click", function () {
+      if (!flag) {
+        this.src = "./image/勾.png";
+        flag = true;
+      } else {
+        this.src = "./image/勾 (1).png";
+        flag = false;
+      }
+    });
+    //获取验证码事件
+    const input = document.getElementById("verificationCodeInput");
+    const input2 = document.getElementById("verificationCodeInput2");
+    const buttonA = document.getElementById("getVerificationCode");
+    const buttonA2 = document.getElementById("getVerificationCode2");
+    function GetVerificationCode() {
+      if (flagTime) {
+        flagTime = false;
+        input.value = generateVerificationCode();
+        let count = 60;
+        buttonA.innerText = `${count} 秒后重新获取`;
+        timer = setInterval(function () {
+          if (phone_get.classList.contains("disactive")) {
+            input.value = "";
+            clearInterval(timer);
+            buttonA.innerText = "获取验证码";
+            flagTime = true;
+            return;
+          }
+          count--;
+          if (count > 0) {
+            buttonA.innerText = `${count} 秒后重新获取`;
+          } else {
+            clearInterval(timer);
+            buttonA.innerText = "获取验证码";
+            flagTime = true;
+          }
+        }, 1000);
+      } else return;
+    }
+    function GetVerificationCode2() {
+      if (flagTime) {
+        flagTime = false;
+        input2.value = generateVerificationCode();
+        let count = 60;
+        buttonA2.innerText = `${count} 秒后重新获取`;
+        timer2 = setInterval(function () {
+          count--;
+          if (count > 0) {
+            buttonA2.innerText = `${count} 秒后重新获取`;
+          } else {
+            clearInterval(timer2);
+            buttonA2.innerText = "获取验证码";
+            flagTime = true;
+          }
+        }, 1000);
+      } else return;
+    }
+    buttonA.addEventListener("click", GetVerificationCode);
+    buttonA2.addEventListener("click", GetVerificationCode2);
+    // 示例：生成随机的 6 位验证码
+    function generateVerificationCode() {
+      return Math.floor(1000 + Math.random() * 9000).toString();
+    }
+  </script>
+</html>
