@@ -1,0 +1,331 @@
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: url(../../images/bg.jpg);
+   background-size: cover;
+ }
+
+
+ #main {
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ #click-section {
+   width: 35%;
+   height: 100%;
+   padding: 20px 0;
+   position: relative;
+ }
+
+ #drawerboxes {
+   margin-left: 10%;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+ }
+
+ #drawerboxes::before {
+   content: "";
+   width: 8px;
+   height: 94%;
+   position: absolute;
+   left: -10px;
+   top: 3%;
+   z-index: 120;
+ }
+
+ .drawerbox {
+   height: calc(100% / 5.5);
+   width: 70%;
+   position: relative;
+   z-index: 100;
+   transform: translateX(-70%);
+   transition: transform .5s ease-in-out;
+ }
+
+ .drawerboxSell {
+   height: calc(100% / 5.5);
+   width: 20%;
+   position: relative;
+   z-index: 150;
+   transform: translateX(-70%);
+   transition: transform .5s ease-in-out;
+ }
+
+ .drawer-btnSell {
+   width: 100%;
+   height: 100%;
+   font: 800 30px '';
+   border: none;
+   transition: background-color .5s ease-in-out;
+   color: #ffffff00;
+ }
+
+
+ .drawerbox.active {
+   transform: translateX(0);
+ }
+
+ .drawer-btn {
+   width: 100%;
+   height: 100%;
+   font: 800 30px '';
+   background-color: rgb(175, 190, 255, 0.276);
+   border: none;
+   transition: background-color .5s ease-in-out;
+   color: #ffffff00;
+ }
+
+ .drawer-btn.dark {
+   background-color: rgba(46, 47, 55, 0.276);
+   color: #ffffffc3;
+ }
+
+
+ .drawer-btn.active {
+   background-image: url(../../images/bg.jpg);
+   background-size: cover;
+   color: rgb(70, 100, 180);
+ }
+
+ .drawer-btn.dark.active {
+   background-image: url(../../images/bg2.jpg);
+   color: rgb(255, 255, 255);
+ }
+
+
+ .drawer-btn:hover {
+   cursor: pointer;
+ }
+
+ .drawer-head {
+   position: absolute;
+   color: rgb(254, 254, 254);
+   font-size: 200px;
+   font-weight: 700;
+   right: -38px;
+   top: calc(50% - 135px);
+   text-shadow: 2px -1px 8px rgba(250, 80, 193, 0.323);
+ }
+
+ .drawer-head.dark {
+   color: rgba(255, 255, 255, 0.611);
+   text-shadow: 2px -1px 8px rgba(182, 182, 182, 0.595);
+ }
+
+ #slide-section {
+   position: relative;
+   height: 100%;
+   width: 65%;
+   display: flex;
+   justify-content: center;
+   padding: 0 40px;
+   background: linear-gradient(to right bottom,
+       rgba(255, 255, 255, .6),
+       rgba(255, 255, 255, .3),
+       rgba(255, 255, 255, .2));
+   backdrop-filter: blur(11px);
+ }
+
+ #slide-bar {
+   position: absolute;
+   top: 10%;
+   left: 40px;
+   height: 80%;
+   width: 1px;
+   background-color: rgb(223, 223, 223);
+ }
+
+ #slide-bar.dark {
+   background-color: rgb(223, 223, 223);
+ }
+
+ #bar {
+   position: absolute;
+   height: calc(100% / 4);
+   width: 5px;
+   top: 0;
+   left: -1.2px;
+   background-color: rgb(175, 190, 255);
+   transition: transform .5s ease-in-out;
+ }
+
+ #bar.dark {
+   background-color: rgb(2, 10, 48);
+ }
+
+ #card-section {
+   height: 100%;
+   width: 80%;
+   overflow: hidden;
+ }
+
+ .card {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+   padding: 10% 0;
+   color: white;
+   font-size: 30px;
+   transition: transform .5s ease-in-out;
+ }
+
+ .card .heng {
+   flex-direction: row;
+ }
+
+ .card.dark {
+   color: rgba(43, 41, 41, 0.201);
+ }
+
+ .card-small-title {
+   margin-left: 25px;
+   font-size: 30px;
+   font-weight: 600;
+   padding-bottom: min(5%, 10px);
+   color: rgb(70, 100, 180);
+ }
+
+ .card-small-title.dark {
+   color: rgba(255, 255, 255, 0.574);
+ }
+
+ .card-title {
+   margin-left: 25px;
+   font-size: 80px;
+   font-weight: 700;
+   padding-bottom: min(20%, 40px);
+   color: rgb(70, 100, 180);
+ }
+
+ .card-title.dark {
+   color: rgba(255, 255, 255, 0.841);
+ }
+
+ .card-content {
+   margin-left: 25px;
+   font-size: 20px;
+   font-weight: 400;
+   color: rgb(94, 123, 255);
+   margin-bottom: 60px;
+ }
+
+ .card-content-title {
+  font-weight: 700;
+  margin-top: 25px;
+   margin-left: 25px;
+   font-size: 20px;
+   color: rgba(0, 0, 0, 0.619);
+   margin-bottom: 60px;
+ }
+
+ .dark .card-content {
+   color: rgb(247, 247, 247);
+ }
+
+ .sell {
+   margin-left: 25px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 90%;
+   height: 200px;
+   background-image: url(../../images/07.jpg);
+   border-radius: 250px;
+   background-size: cover;
+   text-align: center;
+   /* 确保链接文本水平居中 */
+   line-height: 120px;
+   margin-bottom: 25px;
+ }
+
+ .dark .sell {
+   background-image: url(../../images/bg2.jpg);
+ }
+
+ .card-img {
+   width: 60%;
+   height: 150px;
+   overflow: hidden;
+ }
+
+ .card-img img {
+   width: 150px;
+   height:150px;
+ }
+
+ .cover {
+   top: 190px;
+   left: 25px;
+   width: 150px;
+   height: 150px;
+   z-index: 2;
+   border-radius: 50%;
+   border: 10px #fff solid;
+   box-shadow: 0 5px 10px #00000065;
+ }
+
+ a.card-content {
+   width: 100px;
+   height: 50px;
+   margin-left: 100px;
+   color: white;
+   /* 文本颜色，根据背景色调整 */
+   text-decoration: none;
+   /* 移除下划线 */
+   padding: 10px 20px;
+   /* 添加一些内边距 */
+   border: 1px solid white;
+   /* 添加边框，根据需要调整 */
+   border-radius: 5px;
+   /* 边框圆角 */
+   background-color: rgba(0, 0, 0, 0.5);
+   /* 添加半透明背景，以便文本在图像上可见 */
+ }
+
+ .button {
+   background-image: url("../../images/05.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 180px;
+   height: 50px;
+   border-radius: 25px;
+   margin-top: 50px;
+   font-weight: 700;
+   font-size: 14px;
+   letter-spacing: 1.15px;
+   background-color: #4B70E2;
+   color: #f9f9f9;
+   box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #f9f9f9;
+   border: none;
+   outline: none;
+ }
+
+ .IndexMainShell {
+   width: 100%;
+   background-color: #fffb;
+   background-image: url(../../images/bg.jpg);
+   margin: 0px 5px;
+   overflow: auto;
+ }
+
+ .IndexMainShell.dark {
+   background-image: url();
+   background-color: rgb(6, 6, 6, 0.5);
+ }
