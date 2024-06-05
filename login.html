@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录</title>
+  <!-- 导入字体图标 -->
+  <link rel="stylesheet" href="./css/loginCss/iconfont.css">
+  <link rel="stylesheet" href="./css/loginCss/login.css">
+</head>
+
+<body>
+  <!-- 中间部分 -->
+  <div class="loginbody">
+    <div class="shell">
+      <div class="container a-container" id="a-container">
+        <form autocomplete="off" class="form" id="a-form">
+          <h2 class="form_title title">创建账号</h2>
+          <div class="form_icons">
+            <i class="iconfont icon-QQ"></i>
+            <i class="iconfont icon-weixin"></i>
+          </div>
+          <span class="form_span">选择以上的注册方式或电子邮箱注册</span>
+          <input type="text" name="yourname" class="form_input" placeholder="名字" />
+          <input type="text" name="email1" class="form_input" placeholder="邮箱" />
+          <input type="password" name="passW1" class="form_input" placeholder="密码" />
+          <input type="password" name="passW2" class="form_input" placeholder="再次输入密码" />
+          <a class="toggleButton" id="TB1" onclick="togglePasswordVisibility()"><i
+              class="iconfont icon-mimakeshihua-kulian"></i></a>
+          <a class="form_link" href="#"><span>已阅读并同意</span>《用户服务协议》<img id="imgg" class="iconfont imagee "
+              src="./images/勾 (1).png" alt="" /></a>
+          <button id="zhuce" class="form_button button submit" type="submit">注册</button>
+        </form>
+      </div>
+
+      <div class="container b-container" id="b-container">
+        <form autocomplete="off" class="form" id="b-form">
+          <h2 class="form_title title">登入账号</h2>
+          <div class="form_icons">
+            <i class="iconfont icon-QQ"></i>
+            <i class="iconfont icon-weixin"></i>
+          </div>
+          <span class="form_span">选择以上的登录方式或电子邮箱登录</span>
+          <input type="text" name="email2" class="form_input" placeholder="用户名或邮箱" />
+          <input type="password" name="passW3" class="form_input" placeholder="密码" />
+          <a class="toggleButton" id="TB2" onclick="togglePasswordVisibility()"><i
+              class="iconfont icon-mimakeshihua-kulian"></i></a>
+          <a class="form_link">忘记密码？</a>
+          <a class="form_link" href="#"><span>已阅读并同意</span>《用户服务协议》<img id="imgg1" class="iconfont imagee"
+              src="./images/勾 (1).png" alt="" /></a>
+          <button id="denglu" class="form_button button submit" type="submit">登录</button>
+        </form>
+      </div>
+
+      <div class="switch" id="switch-cnt">
+        <div class="switch_circle"></div>
+        <div class="switch_circle switch_circle-t"></div>
+        <div class="switch_container" id="switch-c1">
+          <h2 class="switch_title title" style="letter-spacing: 0;">欢迎回来！</h2>
+          <p class="switch_description description">已有账号？那就去登入账号吧！</p>
+          <button class="switch_button button switch-btn">登录</button>
+        </div>
+
+        <div class="switch_container is-hidden" id="switch-c2">
+          <h2 class="switch_title title" style="letter-spacing: 0;">您好！</h2>
+          <p class="switch_description description">去注册一个账号，成为我们中的一员吧！</p>
+          <button class="switch_button button switch-btn">注册</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 尾部部分 -->
+
+  <div class="lastbody">
+    <div>
+      <span>版权所有 pdxx有限责任公司 </span>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  let switchCtn = document.querySelector("#switch-cnt");
+  let switchC1 = document.querySelector("#switch-c1");
+  let switchC2 = document.querySelector("#switch-c2");
+  let switchCircle = document.querySelectorAll(".switch_circle");
+  let switchBtn = document.querySelectorAll(".switch-btn");
+  let aContainer = document.querySelector("#a-container");
+  let bContainer = document.querySelector("#b-container");
+  let allButtons = document.querySelectorAll(".submit");
+
+  let getButtons = (e) => e.preventDefault()
+  let changeForm = (e) => {
+    // 修改类名
+    switchCtn.classList.add("is-gx");
+    setTimeout(function () {
+      switchCtn.classList.remove("is-gx");
+    }, 1500)
+    switchCtn.classList.toggle("is-txr");
+    switchCircle[0].classList.toggle("is-txr");
+    switchCircle[1].classList.toggle("is-txr");
+    switchC1.classList.toggle("is-hidden");
+    switchC2.classList.toggle("is-hidden");
+    aContainer.classList.toggle("is-txl");
+    bContainer.classList.toggle("is-txl");
+    bContainer.classList.toggle("is-z");
+  }
+  // 点击切换
+  let shell = (e) => {
+    //触发事件
+    for (var i = 0; i < allButtons.length; i++)
+      allButtons[i].addEventListener("click", getButtons);
+    for (var i = 0; i < switchBtn.length; i++)
+      switchBtn[i].addEventListener("click", changeForm)
+  }
+  window.addEventListener("load", shell);
+
+  //使输入框中密码可视化
+  function togglePasswordVisibility() {
+    var passwordInput1 = document.querySelector(
+      "input[name=passW1]");
+    var passwordInput2 = document.querySelector(
+      "input[name=passW2]");
+    var passwordInput3 = document.querySelector(
+      "input[name=passW3]");
+    var toggleButton1 = document.getElementById("TB1");
+    var toggleButton2 = document.getElementById("TB2");
+    if (passwordInput1.type === "password" || passwordInput3 === "password") {
+      passwordInput1.type = "text";
+      passwordInput2.type = "text";
+      passwordInput3.type = "text";
+      toggleButton1.innerHTML = '<i class="iconfont icon-mimakeshihua-xiaolian"></i>';
+      toggleButton2.innerHTML = '<i class="iconfont icon-mimakeshihua-xiaolian"></i>';
+    } else {
+      passwordInput1.type = "password";
+      passwordInput2.type = "password";
+      passwordInput3.type = "password";
+      toggleButton1.innerHTML = '<i class="iconfont icon-mimakeshihua-kulian"></i>';
+      toggleButton2.innerHTML = '<i class="iconfont icon-mimakeshihua-kulian"></i>';
+    }
+  }
+
+  const LogForm = document.getElementById("b-form");
+  const LogButton = document.getElementById("denglu");
+  const zhuceForm = document.getElementById("a-form");
+  const zhuceButton = document.getElementById("zhuce");
+  const imageZhuce = document.getElementById("imgg");
+  const imageLogin = document.getElementById("imgg1");
+  const password_get = document.querySelector(".password_get");
+  let flag = false;
+  LogButton.addEventListener("click", function (e) {
+    const email2 = document.querySelector(
+      "input[name=email2]"
+    );
+    const password_number3 = document.querySelector(
+      "input[name=passW3]"
+    );
+    if (!email2.value || !password_number3.value) {
+      alert("请确保所有输入框都已正确填写！");
+      return;
+    }
+    let existFlag = false;
+    let passFlag = false;
+    e.preventDefault();
+    const keys = Array.from({ length: localStorage.length }, (_, i) => localStorage.key(i));
+    keys.forEach(key => {
+      const v = localStorage.getItem(key);
+      const userData = JSON.parse(v);
+      console.log(userData.email + " " + userData.name + " " + userData.password_number + " " + email2.value + " " + password_number3.value);
+      if (userData.email == email2.value) {
+        existFlag = true;
+        if (userData.password_number == password_number3.value) {
+          userData.HasLogin = true;
+          // 将更改后的对象转换回字符串
+          let updatedString = JSON.stringify(userData);
+          // 将更新后的字符串写回localStorage
+          localStorage.setItem(`${userData.name}`, updatedString);
+          passFlag = true;
+        }
+      } else if (userData.name == email2.value) {
+        existFlag = true;
+        if (userData.password_number == password_number3.value) {
+          userData.HasLogin = true;
+          // 将更改后的对象转换回字符串
+          let updatedString = JSON.stringify(userData);
+          // 将更新后的字符串写回localStorage
+          localStorage.setItem(`${userData.name}`, updatedString);
+          passFlag = true;
+        }
+      }
+    });
+    if (!existFlag) {
+      alert("不存在该用户名或邮箱，请重新输入！");
+      return;
+    }
+    if (!passFlag) {
+      alert("密码输入错误，请重新输入！");
+      return;
+    }
+    if (flag);
+    else {
+      alert("请阅读并同意《用户服务协议》！");
+      return;
+    }
+    LogForm.reset();
+    location.href = "index.html";
+  });
+  imageLogin.addEventListener("click", function () {
+    if (!flag) {
+      this.src = "./images/勾.png";
+      flag = true;
+    } else {
+      this.src = "./images/勾 (1).png";
+      flag = false;
+    }
+  });
+  let flag1 = false;
+  zhuceButton.addEventListener("click", function (e) {
+    const name = document.querySelector(
+      "input[name=yourname]"
+    );
+    const email = document.querySelector(
+      "input[name=email1]"
+    );
+    const password_number1 = document.querySelector(
+      "input[name=passW1]"
+    );
+    const password_number2 = document.querySelector(
+      "input[name=passW2]"
+    );
+    if (!name.value || !email.value || !password_number1.value || !password_number2.value) {
+      alert("请确保所有输入框都已正确填写！");
+      return;
+    }
+    if (password_number1.value != password_number2.value) {
+      alert("密码不一致！");
+      return;
+    }
+    const obj = {
+      name: name.value,
+      email: email.value,
+      password_number: password_number1.value,
+      HasLogin: true,
+      mymessage: ' ',
+      call: ' ',
+      address: ' ',
+      mode: 'sun'
+    };
+    e.preventDefault();
+    if (flag1) localStorage.setItem(`${obj.name}`, JSON.stringify(obj));
+    else {
+      alert("请阅读并同意《用户服务协议》！");
+      return 0;
+    }
+    zhuceForm.reset();
+    location.href = "index.html";
+  });
+  imageZhuce.addEventListener("click", function () {
+    if (!flag1) {
+      this.src = "./images/勾.png";
+      flag1 = true;
+    } else {
+      this.src = "./images/勾 (1).png";
+      flag1 = false;
+    }
+  });
+</script>
+</body>
+
+</html>

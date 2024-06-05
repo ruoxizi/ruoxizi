@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>主页</title>
+  <!-- 引入图标和css文件 -->
+  <link rel="stylesheet" href="./css/celistCss/celist.css" />
+  <link rel="stylesheet" href="./css/celistCss/iconfont.css" />
+  <link rel="stylesheet" href="./css/indexMainCss/indexMain.css" />
+  <link rel="showcut icon" href="./images/logo.ico" type="image/x-icon" />
+</head>
+
+<body class="Body">
+  <!-- 侧边栏开始 -->
+  <nav class="shell close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="./images/logo.ico" alt="" />
+        </span>
+        <div class="text logo-text">
+          <span id="yourname" class="name">pdxx</span>
+          <span class="software">--pdxx官方网站--</span>
+        </div>
+      </div>
+      <i class="iconfont icon-icon-xiangyoujiantou toggle"></i>
+    </header>
+    <div class="menu-bar">
+      <div class="menu">
+        <li class="search-box">
+          <i class="iconfont icon-sousuo icon"></i>
+          <input type="text" placeholder="搜索..." />
+        </li>
+        <ul class="menu-links">
+          <li data-id="myindex" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-name-card icon"></i>
+              <span class="text nac-text">我的个人名片</span>
+            </a>
+          </li>
+
+          <li data-id="mycart" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-shoucangxiao icon"></i>
+              <span class="text nac-text">购物中心</span>
+            </a>
+          </li>
+          <li data-id="message" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-xiaoxi icon"></i>
+              <span class="text nac-text">订单查询</span>
+            </a>
+          </li>
+          <li data-id="callus" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-lianxiwomen_lianxikefu icon"></i>
+              <span class="text nac-text">联系我们</span>
+            </a>
+          </li>
+          <li data-id="backHome" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon icon-shouye"></i>
+              <span class="text nac-text">返回主页</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-content">
+        <li data-id="liLogin">
+          <a href="#">
+            <i class="iconfont icon-zhuxiaoyuan icon"></i>
+            <span class="text nac-text">登录</span>
+          </a>
+        </li>
+        <li data-id="chuxiao">
+          <a href="#">
+            <i class="iconfont icon-zhuxiaoyuan icon"></i>
+            <span class="text nac-text">退出</span>
+          </a>
+        </li>
+        <li class="mode">
+          <div class="sun-moon">
+            <i class="iconfont icon-rijian icon sun"></i>
+            <i class="iconfont icon-yejian icon moon"></i>
+          </div>
+          <span class="mode-text text">白日模式</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+  <!-- 侧边栏结束 -->
+  <!-- 主体开始 -->
+  <section>
+    <div id="main">
+      <div id="click-section">
+        <div id="drawerboxes">
+          <div class="drawerbox active">
+            <button class="drawer-btn active" onclick="slideTo(1)">
+              热门商品<span class="drawer-head">1</span>
+            </button>
+          </div>
+          <div class="drawerbox">
+            <button class="drawer-btn" onclick="slideTo(2)">
+              近期特价商品<span class="drawer-head">2</span>
+            </button>
+          </div>
+          <div class="drawerbox">
+            <button class="drawer-btn" onclick="slideTo(3)">
+              推荐商品<span class="drawer-head">3</span>
+            </button>
+          </div>
+          <div class="drawerbox">
+            <button class="drawer-btn" onclick="slideTo(4)">
+              关注<span class="drawer-head">4</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="slide-section">
+        <div id="slide-bar">
+          <div id="bar"></div>
+        </div>
+        <div id="card-section">
+          <div id="card1" class="card IndexMainShell">
+            <div class="card-title">热门商品</div>
+            <div class="card-small-title">本月销量前五的热门商品<a style="margin-bottom: 50px;margin-left: 50px;" class="card-content getMore">了解更多</a>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/蔬菜/carrots-1508847.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味胡萝卜</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/水果/lychee-510435_1920.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味荔枝</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/水果/strawberries-3359755.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味草莓</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/蔬菜/green-beans-1018624.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味绿豆</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./images/1.png" alt="" />
+              </div>
+              <div class="card-content card-content-title">极品凳子1</div>
+            </div>
+          </div>
+          <div id="card2" class="card IndexMainShell">
+            <div class="card-title">近期特价商品</div>
+            <div class="card-small-title">最近一周的特价商品，质量有保证
+              <a style="margin-bottom: 50px;margin-left: 50px;" class="card-content getMore">了解更多</a>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/蔬菜/carrots-1508847.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味胡萝卜</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/水果/lychee-510435_1920.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味荔枝</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/水果/strawberries-3359755.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味草莓</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/蔬菜/green-beans-1018624.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味绿豆</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./images/1.png" alt="" />
+              </div>
+              <div class="card-content card-content-title">极品凳子1</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./images/2.png" alt="" />
+              </div>
+              <div class="card-content card-content-title">极品凳子2</div>
+            </div>
+          </div>
+          <div id="card3" class="card IndexMainShell">
+            <div class="card-title">推荐商品</div>
+            <div class="card-small-title">
+              根据您的近期购买记录而推荐的商品
+                        <a style="margin-bottom: 50px;margin-left: 50px;" class="card-content getMore">了解更多</a>
+                        </div>
+                        <div class="sell">
+                          <div class="card-img">
+                            <img class="cover" src="./image/蔬菜/carrots-1508847.jpg" alt="" />
+                          </div>
+                          <div class="card-content card-content-title">美味胡萝卜</div>
+                        </div>
+                        <div class="sell">
+                          <div class="card-img">
+                            <img class="cover" src="./image/水果/lychee-510435_1920.jpg" alt="" />
+                          </div>
+                          <div class="card-content card-content-title">美味荔枝</div>
+                        </div>
+                        <div class="sell">
+                          <div class="card-img">
+                            <img class="cover" src="./image/水果/strawberries-3359755.jpg" alt="" />
+                          </div>
+                          <div class="card-content card-content-title">美味草莓</div>
+                        </div>
+                        <div class="sell">
+                          <div class="card-img">
+                            <img class="cover" src="./image/蔬菜/green-beans-1018624.jpg" alt="" />
+                          </div>
+                          <div class="card-content card-content-title">美味绿豆</div>
+                        </div>
+                        <div class="sell">
+                          <div class="card-img">
+                            <img class="cover" src="./images/1.png" alt="" />
+                          </div>
+                          <div class="card-content card-content-title">极品凳子1</div>
+                        </div>
+                        <div class="sell">
+                          <div class="card-img">
+                            <img class="cover" src="./images/2.png" alt="" />
+                          </div>
+                          <div class="card-content card-content-title">极品凳子2</div>
+                        </div>
+          </div>
+          <div id="card4" class="card IndexMainShell">
+            <div class="card-title">关注</div>
+            <div class="card-small-title">
+              您所关注的商店最近推出的商品
+              <a style="margin-bottom: 50px;margin-left: 50px;" class="card-content getMore">了解更多</a>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/蔬菜/carrots-1508847.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味胡萝卜</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/水果/lychee-510435_1920.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味荔枝</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/水果/strawberries-3359755.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味草莓</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./image/蔬菜/green-beans-1018624.jpg" alt="" />
+              </div>
+              <div class="card-content card-content-title">美味绿豆</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./images/1.png" alt="" />
+              </div>
+              <div class="card-content card-content-title">极品凳子1</div>
+            </div>
+            <div class="sell">
+              <div class="card-img">
+                <img class="cover" src="./images/2.png" alt="" />
+              </div>
+              <div class="card-content card-content-title">极品凳子2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 主体结束 -->
+</body>
+<script src="./js/indexMain.js"></script>
+<script src="./js/celist.js"></script>
+
+</html>

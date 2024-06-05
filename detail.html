@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品细节</title>
+  <link rel="stylesheet" href="./css/buycarCss/style.css">
+  <link rel="stylesheet" href="./css/celistCss/iconfont.css" />
+  <link rel="stylesheet" href="./css/celistCss/celist.css" />
+  <link rel="showcut icon" href="./images/logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 侧边栏开始 -->
+  <nav class="shell close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="./images/logo.ico" alt="" />
+        </span>
+        <div class="text logo-text">
+          <span id="yourname" class="name">pdxx</span>
+          <span class="software">--pdxx官方网站--</span>
+        </div>
+      </div>
+      <i class="iconfont icon-icon-xiangyoujiantou toggle"></i>
+    </header>
+    <div class="menu-bar">
+      <div class="menu">
+        <li class="search-box">
+          <i class="iconfont icon-sousuo icon"></i>
+          <input type="text" placeholder="搜索..." />
+        </li>
+        <ul class="menu-links">
+          <li data-id="myindex" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-name-card icon"></i>
+              <span class="text nac-text">我的个人名片</span>
+            </a>
+          </li>
+  
+          <li data-id="mycart" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-shoucangxiao icon"></i>
+              <span class="text nac-text">购物中心</span>
+            </a>
+          </li>
+          <li data-id="message" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-xiaoxi icon"></i>
+              <span class="text nac-text">订单查询</span>
+            </a>
+          </li>
+          <li data-id="callus" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-lianxiwomen_lianxikefu icon"></i>
+              <span class="text nac-text">联系我们</span>
+            </a>
+          </li>
+          <li data-id="backHome" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon icon-shouye"></i>
+              <span class="text nac-text">返回主页</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-content">
+        <li data-id="liLogin">
+          <a href="#">
+            <i class="iconfont icon-zhuxiaoyuan icon"></i>
+            <span class="text nac-text">登录</span>
+          </a>
+        </li>
+        <li data-id="chuxiao">
+          <a href="#">
+            <i class="iconfont icon-zhuxiaoyuan icon"></i>
+            <span class="text nac-text">退出</span>
+          </a>
+        </li>
+        <li class="mode">
+          <div class="sun-moon">
+            <i class="iconfont icon-rijian icon sun"></i>
+            <i class="iconfont icon-yejian icon moon"></i>
+          </div>
+          <span class="mode-text text">白日模式</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+  <!-- 侧边栏结束 -->
+  <div id="app"></div>
+  <div id="temporaryContent">
+    <div class="title">商品细节</div>
+    <div class="detail">
+      <div class="image">
+        <img style="border-radius:50%;" src="">
+      </div>
+      <div class="content">
+        <h1 class="name"></h1>
+        <div class="price"></div>
+        <div class="buttons">
+          <button>结算</button>
+          <button class="addCart iconfont">添加到购物车
+            <span class="icon-gouwuche iconfont">
+            </span>
+          </button>
+        </div>
+        <div class="description"></div>
+      </div>
+    </div>
+    <div class="title">其他类似商品</div>
+    <div class="listProduct"></div>
+  </div>
+  <script src="./js/buyCar/detail.js" type="module"></script>
+  <script type="module">
+    let detailLoadedPromise = new Promise((resolve) => {
+      import('./js/buyCar/detail.js').then(() => {
+        resolve();
+      });
+    });
+    detailLoadedPromise.then(() => {
+      const script = document.createElement('script');
+      script.src = "./js/celist.js";
+      document.head.appendChild(script);
+    });
+  </script>
+</body>
+
+</html>
