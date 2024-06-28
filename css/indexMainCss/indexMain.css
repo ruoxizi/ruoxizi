@@ -1,0 +1,50 @@
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: url(../../images/html_table.jpg);
+   background-size: cover;
+ }
+
+
+
+ .card-content {
+   color: rgb(0, 0, 0);
+   /* 文本颜色，根据背景色调整 */
+   text-decoration: none;
+   /* 移除下划线 */
+   padding: 10px 20px;
+   /* 添加一些内边距 */
+   border: 1px solid rgb(0, 0, 0);
+   /* 添加边框，根据需要调整 */
+   border-radius: 5px;
+   /* 边框圆角 */
+   background-color: rgba(252, 250, 250);
+   /* 添加半透明背景，以便文本在图像上可见 */
+   margin-left: 50px;
+   margin: 25px;
+ }
+
+ .card-content:hover {
+   color: white;
+   border: 1px solid white;
+   background-color: rgba(0, 0, 0);
+ }
+
+ .dark .card-content {
+   color: white;
+   border: 1px solid white;
+   background-color: rgba(0, 0, 0);
+ }
+
+ .dark .card-content:hover {
+   color: rgb(0, 0, 0);
+   border: 1px solid rgb(0, 0, 0);
+   background-color: rgba(252, 250, 250);
+ }

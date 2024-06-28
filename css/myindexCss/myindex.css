@@ -1,0 +1,174 @@
+ * {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-image: url(../../images/html_table.jpg);
+ }
+
+ .myIndexShell {
+   width: 780px;
+   height: 580px;
+   background: #ffffff;
+   position: relative;
+   border-radius: 25px;
+   border: 10px solid #000;
+   opacity: 0.8;
+ }
+
+ .head {
+   height: 340px;
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+ }
+
+ .head::before {
+   content: '';
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background: url("../../images/壁纸.avif");
+   background-size: cover;
+   z-index: -1;
+   transform: skewY(-3deg);
+   transform-origin: 0 0;
+ }
+
+ .cover {
+   position: absolute;
+   top: 190px;
+   left: 25px;
+   width: 220px;
+   z-index: 2;
+   border-radius: 500px;
+   border: 10px #ffffff solid;
+   box-shadow: 0 5px 10px #00000065;
+ }
+
+ .data {
+   padding: 190px 0 0 280px;
+   text-shadow: 0 0 20px #000;
+ }
+
+ .data .title {
+   color: white;
+   font-size: 50px;
+   font: 900 50px '';
+   margin-bottom: 5px;
+   position: relative;
+ }
+
+ .foot {
+   line-height: 26px;
+   color: #444;
+ }
+
+ .tags {
+   padding-left: 30px;
+   padding-top: 100px;
+   width: 250px;
+   float: left;
+   text-align: center;
+ }
+
+ .tag {
+   font-weight: 700;
+   font-size: 14px;
+   letter-spacing: 1.15px;
+   border: 4px solid #000;
+   background-color: #2af6c38e;
+   color: #000000;
+   border-radius: 10px;
+   padding: 0px 8px;
+   margin-right: 4px;
+   line-height: 35px;
+   cursor: pointer;
+ }
+
+ .tag:hover {
+   background-color: #262626;
+   color: #cccccc;
+ }
+
+ .tag.dark {
+   border: 4px solid #000;
+   background-color: #000000;
+   color: #ffffff;
+ }
+
+ .tag.dark:hover {
+   background-color: #ffffff;
+   color: #303030;
+ }
+
+ .introduce {
+   position: absolute;
+   right: 0px;
+   padding: 25px 0 0 35px;
+   width: 480px;
+   float: left;
+ }
+
+ .MyIndexButton {
+   width: 180px;
+   height: 50px;
+   border-radius: 25px;
+   margin-top: 50px;
+   font-weight: 700;
+   font-size: 14px;
+   letter-spacing: 1.15px;
+   background-color: #ffffff;
+   color: #676565;
+   border: none;
+   outline: none;
+   opacity: 0.9;
+   border:8px solid black;
+ }
+
+ .MyIndexButton.dark {
+   background-color: #000000;
+   color: #ffffff;
+ }
+
+ .MyIndexButton:hover {
+   background-color: #4bc4e2;
+   color: #f9f9f9;
+ }
+
+ .MyIndexButton.dark:hover {
+   background-color: #525252;
+   color: #ffffff;
+ }
+
+
+ .none {
+   display: none;
+ }
+
+ .active {
+   display: block;
+ }
+
+
+ .myIndexInput {
+   font-weight: 700;
+   font-size: 14px;
+   letter-spacing: 1.15px;
+   width: 80%;
+   height: 30px;
+   border-radius: 1px;
+   margin-bottom: 15px;
+   margin-left: 25px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
