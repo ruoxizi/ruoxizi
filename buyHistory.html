@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>购物中心</title>
+  <link rel="stylesheet" href="./css/celistCss/celist.css" />
+  <link rel="stylesheet" href="./css/celistCss/iconfont.css" />
+  <link rel="stylesheet" href="./css/buyHistoryCss/buyHistory.css" />
+  <link rel="showcut icon" href="./images/logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 侧边栏开始 -->
+  <nav class="shell close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="./images/logo.ico" alt="" />
+        </span>
+        <div class="text logo-text">
+          <span id="yourname" class="name">pdxx</span>
+          <span class="software">--pdxx官方网站--</span>
+        </div>
+      </div>
+    </header>
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links">
+          <li data-id="myindex" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-name-card icon"></i>
+              <span class="text nac-text">我的个人名片</span>
+            </a>
+          </li>
+
+          <li data-id="mycart" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-shoucangxiao icon"></i>
+              <span class="text nac-text">购物中心</span>
+            </a>
+          </li>
+          <li data-id="message" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-xiaoxi icon"></i>
+              <span class="text nac-text">订单查询</span>
+            </a>
+          </li>
+          <li data-id="callus" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-lianxiwomen_lianxikefu icon"></i>
+              <span class="text nac-text">联系我们</span>
+            </a>
+          </li>
+          <li data-id="backHome" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon icon-shouye"></i>
+              <span class="text nac-text">返回主页</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-content">
+        <li data-id="liLogin">
+          <a href="#">
+            <i class="iconfont icon-zhuxiaoyuan icon"></i>
+            <span class="text nac-text">登录</span>
+          </a>
+        </li>
+        <li data-id="chuxiao">
+          <a href="#">
+            <i class="iconfont icon-zhuxiaoyuan icon"></i>
+            <span class="text nac-text">退出</span>
+          </a>
+        </li>
+        <li class="mode">
+          <div class="sun-moon">
+            <i class="iconfont icon-rijian icon sun"></i>
+            <i class="iconfont icon-yejian icon moon"></i>
+          </div>
+          <span class="mode-text text">白日模式</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+  <!-- 侧边栏结束 -->
+  <div class="Main">
+    <div class="histroy" id="history">
+    </div>
+  </div>
+  <script src="./js/buyCar/buyHistory.js">
+  </script>
+  <script src="./js/celist.js">
+  </script>
+</body>
+
+</html>

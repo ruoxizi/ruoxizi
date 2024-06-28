@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>支付界面</title>
+  <link rel="stylesheet" href="./css/checkOutCss/checkOut.css">
+  <link rel="stylesheet" href="./css/loginCss/iconfont.css">
+  <link rel="showcut icon" href="./images/logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <div></div>
+  <div class="main">
+        <div class="introduce CheckDiv">
+          <form class="none" autocomplete="off">
+            <input type="text" id="myname" class="myIndexInput" name="myname" placeholder="收件人姓名" />
+            <input type="text" id="mycall" name="mycall" class="myIndexInput" placeholder="电话" />
+            <input type="text" id="myaddress" name="myaddress" class="myIndexInput" placeholder="收货地址" />
+          </form>
+        </div>
+    <div id="myMessage">
+      <div id="name" class="CheckBlock">
+        收件人姓名：
+      </div>
+      <div id="call" class="CheckBlock">
+        手机号码：
+      </div>
+      <div id="address" class="CheckBlock">
+        收货地址：
+      </div>
+    </div>
+    <div class="CheckBlock">
+      请选择您的支付方式:
+      <input type="radio" name="group" id="wx"><i class="iconfont icon-QQ">QQ</i>
+      <input type="radio" name="group" id="zhifubao"><i class="iconfont icon-weixin">WX</i>
+    </div>
+
+    <div class="ChangeDiv" id="ChangeAndSave">
+      <button id="change" class="MyIndexButton submit">修改信息</button>
+      <!-- <button id="save" class="MyIndexButton submit">保存信息</button> -->
+    </div>
+    <div id="productList" class="productList">
+      <div id="title" class="title">
+        商品清单
+      </div>
+    </div>
+
+    <div class="CheckDiv">
+      <a href="JavaScript:void(0)"><span>已阅读并同意</span>《用户服务协议》<img id="imgg" class="iconfont imagee " src="./images/勾 (1).png"
+          alt="" /></a>
+    </div>
+    <div class="btnGroup">
+      <button class="btn" name="queding" id="queding">支付</button>
+      <button class="btn" name="quxiao" id="quxiao">取消</button>
+    </div>
+  </div>
+
+</body>
+<script src="./js/buyCar/checkOut.js"></script>
+
+</html>

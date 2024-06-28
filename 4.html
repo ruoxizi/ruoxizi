@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>购物中心</title>
+  <link rel="stylesheet" href="./css/buycarCss/style.css" />
+  <link rel="stylesheet" href="./css/celistCss/celist.css" />
+  <link rel="stylesheet" href="./css/celistCss/iconfont.css" />
+  <link rel="showcut icon" href="./images/logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 侧边栏开始 -->
+  <nav class="shell close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="./images/logo.ico" alt="" />
+        </span>
+        <div class="text logo-text">
+          <span id="yourname" class="name">pdxx</span>
+          <span class="software">--pdxx官方网站--</span>
+        </div>
+      </div>
+    </header>
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-links">
+          <li data-id="myindex" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-name-card icon"></i>
+              <span class="text nac-text">我的个人名片</span>
+            </a>
+          </li>
+
+          <li data-id="mycart" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-shoucangxiao icon"></i>
+              <span class="text nac-text">购物中心</span>
+            </a>
+          </li>
+          <li data-id="message" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-xiaoxi icon"></i>
+              <span class="text nac-text">订单查询</span>
+            </a>
+          </li>
+          <li data-id="callus" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon-lianxiwomen_lianxikefu icon"></i>
+              <span class="text nac-text">联系我们</span>
+            </a>
+          </li>
+          <li data-id="backHome" class="nav-link">
+            <a href="#">
+              <i class="iconfont icon icon-shouye"></i>
+              <span class="text nac-text">返回主页</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-content">
+        <li data-id="liLogin">
+          <a href="#">
+            <i class="iconfont icon-zhuxiaoyuan icon"></i>
+            <span class="text nac-text">登录</span>
+          </a>
+        </li>
+        <li data-id="chuxiao">
+          <a href="#">
+            <i class="iconfont icon-zhuxiaoyuan icon"></i>
+            <span class="text nac-text">退出</span>
+          </a>
+        </li>
+        <li class="mode">
+          <div class="sun-moon">
+            <i class="iconfont icon-rijian icon sun"></i>
+            <i class="iconfont icon-yejian icon moon"></i>
+          </div>
+          <span class="mode-text text">白日模式</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+  <!-- 侧边栏结束 -->
+  <section class="productMain">
+    <div class="container">
+      <header class="buyindexHeader">
+        <div class="title">
+        </div>
+        <div class="icon-gouwuche iconfont icon-cart " style="font-size: 60px;background-color: white;border-radius: 50px;">
+          <span style="font-size: 20px;">0</span>
+        </div>
+      </header>
+      <div id="contentTab">
+        <div class="listProduct"></div>
+      </div>
+    </div>
+    <div class="cartTab">
+      <h1
+        style="font-weight:700;font-size:25px;border:8px solid black;width: auto;background-color: rgba(0, 0, 0, 0.304);justify-content: center;text-align: center; color: white;line-height: 25px;">
+        您的购物车</h1>
+      <div class="listCart">
+      </div>
+      <div class="btn">
+        <button class="buyINDEXclose" style="font-weight: 700;border:5px solid black;">关闭</button>
+        <button class="buyINDEXcheckOut" style="font-weight: 700;border:5px solid black;">结算</button>
+      </div>
+    </div>
+    <div class="showProduct">
+    </div>
+  </section>
+  </div>
+</body>
+<script src="./js/celist.js">
+</script>
+<script>
+  const products = [
+    {
+      id: 1,
+      name: "美味甜椒",
+      price: 700,
+      image: "./image/蔬菜/bell-peppers-499068.jpg",
+      description:
+        "产自江门五邑大学,采用了最新工艺，经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 2,
+      name: "美味菜花",
+      price: 700,
+      image: "./image/蔬菜/vegetables-1238252.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 3,
+      name: "美味绿豆",
+      price: 700,
+      image: "./image/蔬菜/green-beans-1018624.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 4,
+      name: "美味胡萝卜",
+      price: 700,
+      image: "./image/蔬菜/carrots-1508847.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 5,
+      name: "美味西瓜",
+      price: 200,
+      image: "./image/水果/watermelon-833202.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 6,
+      name: "美味葡萄",
+      price: 230,
+      image: "./image/水果/paris-2406492_1920.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 7,
+      name: "美味苹果",
+      price: 230,
+      image: "./image/水果/apple-1122537_1920.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 8,
+      name: "蔬菜杂烩",
+      price: 230,
+      image: "./image/蔬菜/vegetables-1238252.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 9,
+      name: "荔枝",
+      price: 230,
+      image: "./image/水果/lychee-510435_1920.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 10,
+      name: "葡萄",
+      price: 230,
+      image: "./image/水果/grapes-6673291_1920.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 11,
+      name: "红富士苹果",
+      price: 230,
+      image: "./image/水果/apple.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+    {
+      id: 12,
+      name: "榴莲",
+      price: 230,
+      image: "./image/水果/榴莲.jpg",
+      description:
+        "产自江门五邑大学，风味独特，十分可口！经由专人培育，品质极佳，获得国家五星级认证，买家可放心购买！七天内无理由退换！",
+    },
+  ];
+  function cart() {
+    let listCartHTML = document.querySelector(".listCart");
+    let iconCart = document.querySelector(".icon-cart");
+    let iconCartSpan = iconCart.querySelector("span");
+    let body = document.querySelector("body");
+    let closeCart = document.querySelector(".buyINDEXclose");
+    let cart = [];
+    let checkOut;
+    checkOut = document.querySelector(".buyINDEXcheckOut");
+    checkOut.addEventListener("click", function () {
+      location.href = "checkOut.html";
+    });
+    // open and close tab
+    iconCart.addEventListener("click", () => {
+      body.classList.toggle("activeTabCart"); //开启右边栏
+    });
+    closeCart.addEventListener("click", () => {
+      body.classList.toggle("activeTabCart");
+    });
+
+    function setProductInCart(idProduct, value) {
+      let positionThisProductInCart = cart.findIndex(
+        (value) => value.product_id == idProduct
+      );
+      if (value <= 0) {
+        cart.splice(positionThisProductInCart, 1);
+      } else if (positionThisProductInCart < 0) {
+        cart.push({
+          product_id: idProduct,
+          quantity: 1,
+        });
+      } else {
+        cart[positionThisProductInCart].quantity = value;
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      addCartToHTML();
+    }
+    function addCartToHTML() {
+      listCartHTML.innerHTML = "";
+      let totalQuantity = 0;
+      if (cart.length > 0) {
+        cart.forEach((item) => {
+          totalQuantity = totalQuantity + item.quantity;
+          let newItem = document.createElement("div");
+          newItem.classList.add("item");
+          newItem.dataset.id = item.product_id;
+          let positionProduct = products.findIndex(
+            (value) => value.id == item.product_id
+          );
+          let info = products[positionProduct];
+          listCartHTML.appendChild(newItem);
+          newItem.innerHTML = `
+                <div class="image showMsg" style="font-weight: 700;border:2px solid black;">
+                        <img src="${info.image}">
+                    </div>
+                    <div class="name">
+                    ${info.name}
+                    </div>
+                    <div class="totalPrice">$${info.price * item.quantity}</div>
+                    <div class="quantity">
+                        <span class="minus" data-id="${info.id}"><</span>
+                        <span style="color:red;">${item.quantity}</span>
+                        <span class="plus" data-id="${info.id}">></span>
+                    </div>
+                `;
+        });
+      }
+      iconCartSpan.innerText = totalQuantity;
+    }
+    document.addEventListener("click", (event) => {
+      let buttonClick = event.target;
+      let idProduct = buttonClick.dataset.id;
+      let quantity = null;
+      let positionProductInCart = cart.findIndex(
+        (value) => value.product_id == idProduct
+      );
+      switch (true) {
+        case buttonClick.classList.contains("addCart"):
+          quantity =
+            positionProductInCart < 0
+              ? 1
+              : cart[positionProductInCart].quantity + 1;
+          setProductInCart(idProduct, quantity);
+          break;
+        case buttonClick.classList.contains("minus"):
+          quantity = cart[positionProductInCart].quantity - 1;
+          setProductInCart(idProduct, quantity);
+          break;
+        case buttonClick.classList.contains("plus"):
+          quantity = cart[positionProductInCart].quantity + 1;
+          setProductInCart(idProduct, quantity);
+          break;
+        default:
+          break;
+      }
+    });
+
+    function CartInitApp() {
+      if (localStorage.getItem("cart")) {
+        cart = JSON.parse(localStorage.getItem("cart"));
+        addCartToHTML();
+      }
+    }
+    CartInitApp();
+  }
+  function showMsg(num) {
+    let product = products[num];
+    let showmsg = document.querySelector(".showProduct");
+    let newProduct = document.createElement("div");
+    newProduct.classList.add("item");
+    newProduct.innerHTML = `<a href="#">
+        <img src="${product.image}">
+        </a>
+        <div class="block">
+        <h2>名称：${product.name}</h2>
+        </div>
+                <div class="BlockpPrice">
+        <div class="price">价格：$${product.price}</div>
+        </div>
+        </div>
+          <div class="block">
+        <div class="description">${product.description}</div>
+        </div>
+        <div>
+         <button 
+             class="addCart" 
+             data-id='${product.id}'>
+                添加到购物车
+         </button><button  onclick={window.location.href="./buyindex.html"}>返回购物中心</button>
+         </div>`;
+    console.log(newProduct);
+    showmsg.appendChild(newProduct);
+  }
+  showMsg(3);
+  cart();
+</script>
+
+</html>
